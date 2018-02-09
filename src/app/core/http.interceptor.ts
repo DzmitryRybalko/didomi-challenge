@@ -20,6 +20,7 @@ export class HttpConsentsInterceptor implements HttpInterceptor {
       }
 
       if (request.url.endsWith('consent') && request.method === 'POST') {
+        consents.push(request.body)
         return Observable.of(new HttpResponse({ status: 200 }));
       }
 

@@ -11,7 +11,6 @@ export class ConsentService {
   constructor(private http: HttpClient) {}
 
   getConsents() {
-    this.consents = [];
     return this.http.get('/consents')
       .pipe(
         tap<Consent[]>(consents => {
@@ -21,11 +20,6 @@ export class ConsentService {
   }
 
   addConsent(consent: Consent) {
-    return this.http.post('consent', consent)
-      .pipe(
-        tap(() => {
-          this.consents.push(consent);
-        })
-      );
+    return this.http.post('consent', consent);
   }
 }
