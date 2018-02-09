@@ -1,4 +1,4 @@
-# Didomi challenge
+# [Didomi challenge](https://dzmitryrybalko.github.io/didomi-challenge)
 
 Implementation of [frontend challenge](https://github.com/didomi/challenges/tree/master/frontend)
 
@@ -28,3 +28,7 @@ npm start
 ```
 
 If everything is fine you should watch application at 4200 port at your [browser](http://localhost:4200)
+
+
+## Demo
+You can see demo at https://dzmitryrybalko.github.io/didomi-challenge
