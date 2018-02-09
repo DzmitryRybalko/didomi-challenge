@@ -1,0 +1,33 @@
+<div class="give-consent">
+  <form (ngSubmit)="onSubmit()" #consentForm="ngForm">
+    <div class="row-group">
+      <div class="form-group">
+        <input type="text" class="form-control"
+               required placeholder="Name"
+               [(ngModel)]="consent.name" name="name">
+      </div>
+    
+      <div class="form-group">
+        <input type="email" class="form-control" email
+               required placeholder="Email addres"
+               [(ngModel)]="consent.email" name="email">
+      </div>
+    </div>
+
+    <div class="row-group">
+      <div class="agreements">
+        <div class="agreements-title">I agree to:</div>
+        <div class="agreements-list">
+          <label *ngFor="let agreement of consent.agreements" class="agreement">
+            <input type="checkbox"
+            [(ngModel)]="agreement.selected" name="agreement.text"
+            (change)="calculateSomeSelected()">
+            {{agreement.text}}
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <button class="submit-consent" type="submit" [disabled]="!consentForm.form.valid || !someSelected">Give consent</button>
+  </form>
+</div>

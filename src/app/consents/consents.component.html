@@ -1,0 +1,43 @@
+<div class="consents">
+  <table class="consents-table" border="3">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th> 
+        <th class="given-consent">Consent given for</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let consent of pageConsents">
+        <th>{{consent.name}}</th>
+        <th>{{consent.email}}</th>
+        <th class="given-consent">
+          <span *ngFor="let agreement of consent.selectedAgreements" class="comma-agreement">
+            {{agreement.text}}
+          </span>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul class="pagination">
+    <li [ngClass]="{disabled:pager.currentPage === 1}" class="prev">
+      <a (click)="setPage(pager.currentPage - 1)">< < Previous page</a>
+    </li>
+
+    <li id="spacer"></li>
+
+    <li *ngFor="let page of pager.pages" 
+      [ngClass]="{active:pager.currentPage === page}" class="page">
+      <a (click)="setPage(page)">
+        {{page}}
+      </a>
+    </li>
+
+    <li id="spacer"></li>
+
+    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" class="next">
+      <a (click)="setPage(pager.currentPage + 1)">Next page > ></a>
+    </li>
+  </ul>
+</div>

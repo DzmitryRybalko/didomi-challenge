@@ -1,0 +1,72 @@
+@import '~sass/variables';
+
+.consents {
+  .consents-table {
+    border-collapse: collapse;
+    width: 800px;
+    height: 150px;
+  
+    th {
+      padding: 8px 5px;
+      width: 25%;
+
+      &.given-consent {
+        width: 50%;
+        text-align: left;
+      }
+    }
+  
+    tbody th {
+      font-weight: normal;
+      text-align: start;
+    }
+  
+    .comma-agreement {
+      display: inline-block;
+      padding-right: 5px;
+
+      &::after {
+        content: ', ';
+      }
+  
+      &:last-child::after {
+        content: '';
+      }
+    }
+  }
+
+  .pagination {
+    list-style: none;
+    border: 1px solid black;
+    margin: 0;
+    padding: 5px 10px;
+    display: flex;
+    flex-flow:       row nowrap;
+    justify-content: flex-end;
+    align-items:     center;
+    text-decoration: underline;
+    color: #0000ff;
+
+    #spacer {
+      visibility: hidden;
+      flex-grow: 1;    
+    }
+
+    li {
+      padding: 0 5px;
+      cursor: pointer;
+      user-select: none;
+
+      &.disabled {
+        pointer-events: none;
+        cursor: default;
+        color: $gray-dark;
+      }
+    }
+
+    .active {
+      color: $gray;
+    }
+  }
+}
+

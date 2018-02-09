@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-sidenav-container fullscreen>
+  <mat-sidenav class="side-nav"mode="side" opened>
+    <a routerLink="/give-consent" routerLinkActive="active-link">Give Consents</a>
+    <a routerLink="/consents" routerLinkActive="active-link">Collected Consents</a>
+  </mat-sidenav>
+  <mat-sidenav-content class="content-box">
+      <router-outlet flex></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
