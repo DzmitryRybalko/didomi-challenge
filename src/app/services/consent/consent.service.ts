@@ -24,8 +24,8 @@ export class ConsentService {
     return this.http.post('consent', consent)
       .pipe(
         tap(() => {
-          this.consents.push(consent)
+          this.consents.push(consent);
         })
-      )
+      );
   }
 }

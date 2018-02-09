@@ -6,9 +6,9 @@ Implementation of [frontend challenge](https://github.com/didomi/challenges/tree
 
 ### Prerequisites
 
-You not need some special things for run this project. 
+You not need some special things to run this project. 
 
-You should hae just [git](https://git-scm.com/) and [node.js](https://nodejs.org/)
+You should have just [git](https://git-scm.com/) and [node.js](https://nodejs.org/)
 
 
 ### Installing

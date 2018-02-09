@@ -1,7 +1,7 @@
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { GiveConsentComponent }   from './give-consent/give-consent.component';
+import { GiveConsentComponent } from './give-consent/give-consent.component';
 import { ConsentsComponent } from './consents/consents.component';
 
 const routes: Routes = [
